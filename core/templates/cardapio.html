@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Cardápio</title>
+</head>
+<body>
+    <h1>Cardápio</h1>
+    <ul>
+        {% for item in itens %}
+            <li>{{ item.nome }} - {{ item.descricao }} - R$ {{ item.preco }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Delivery</title>
+</head>
+<body>
+    <h1>Pedido de Delivery</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <label for="cliente">Cliente:</label>
+        <select name="cliente" id="cliente">
+            {% for cliente in clientes %}
+                <option value="{{ cliente.id }}">{{ cliente.nome }}</option>
+            {% endfor %}
+        </select>
+        <br>
+        <label for="endereco">Endereço:</label>
+        <input type="text" name="endereco" id="endereco">
+        <br>
+        <label for="itens">Itens:</label>
+        <textarea name="itens" id="itens"></textarea>
+        <br>
+        <input type="submit" value="Fazer Pedido">
+    </form>
+</body>
+</html>

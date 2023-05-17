@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Confirmação de Delivery</title>
+</head>
+<body>
+    <h1>Detalhes do Pedido</h1>
+    <p>Cliente: {{ pedido.cliente }}</p>
+    <p>Endereço: {{ pedido.endereco }}</p>
+    <p>Itens: {{ pedido.itens }}</p>
+
+    <h2>Confirmação de Entrega</h2>
+    <form method="POST">
+        {% csrf_token %}
+        <input type="submit" value="Confirmar Entrega">
+    </form>
+</body>
+</html>
