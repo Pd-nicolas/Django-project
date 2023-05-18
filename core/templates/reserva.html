@@ -5,7 +5,7 @@
     <title>Reserva</title>
 </head>
 <body>
-    <h1>Reserva</h1>
+    <h1>Reservar Mesa</h1>
     <form method="POST">
         {% csrf_token %}
         <label for="cliente">Cliente:</label>
@@ -14,14 +14,18 @@
                 <option value="{{ cliente.id }}">{{ cliente.nome }}</option>
             {% endfor %}
         </select>
-        <br>
+        <br><br>
         <label for="data">Data:</label>
         <input type="date" name="data" id="data">
-        <br>
+        <br><br>
         <label for="hora">Hora:</label>
         <input type="time" name="hora" id="hora">
-        <br>
+        <br><br>
         <input type="submit" value="Fazer Reserva">
     </form>
+
+    {% if reserva_confirmada %}
+        <p>Reserva confirmada para {{ cliente.nome }} em {{ data }} às {{ hora }}.</p>
+    {% endif %}
 </body>
 </html>

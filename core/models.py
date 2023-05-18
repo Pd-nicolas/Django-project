@@ -4,6 +4,7 @@ class Cliente(models.Model):
     nome = models.CharField(max_length=100)
     email = models.EmailField()
     telefone = models.CharField(max_length=20)
+    endereco = models.CharField(max_length=200)
 
 class Reserva(models.Model):
     cliente = models.ForeignKey(Cliente, on_delete=models.CASCADE)
@@ -16,6 +17,7 @@ class PedidoDelivery(models.Model):
     itens = models.TextField()
 
 class Cardapio(models.Model):
+    imagem = models.ImageField(upload_to='cardapio/')
     nome = models.CharField(max_length=100)
     descricao = models.TextField()
     preco = models.DecimalField(max_digits=5, decimal_places=2)

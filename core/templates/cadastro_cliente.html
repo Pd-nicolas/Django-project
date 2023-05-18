@@ -6,15 +6,6 @@
 </head>
 <body>
     <h1>Cadastro de Cliente</h1>
-    {% if errors %}
-        <ul>
-            {% for field_errors in errors.values %}
-                {% for error in field_errors %}
-                    <li>{{ error }}</li>
-                {% endfor %}
-            {% endfor %}
-        </ul>
-    {% endif %}
     <form method="POST">
         {% csrf_token %}
         <label for="nome">Nome:</label>
@@ -22,6 +13,12 @@
         <br>
         <label for="email">Email:</label>
         <input type="email" name="email" id="email">
+        <br>
+        <label for="endereco">Endereço:</label>
+        <input type="text" name="endereco" id="endereco">
+        <br>
+        <label for="telefone">Telefone:</label>
+        <input type="text" name="telefone" id="telefone">
         <br>
         <input type="submit" value="Cadastrar">
     </form>

@@ -6,10 +6,30 @@
 </head>
 <body>
     <h1>Cardápio</h1>
-    <ul>
+
         {% for item in itens %}
-            <li>{{ item.nome }} - {{ item.descricao }} - R$ {{ item.preco }}</li>
+            <div class="cardapio-item">
+                <img src="{{ item.imagem.url }}" alt="{{ item.nome }}">
+               <h2>{{ item.nome }}</h2>
+                <p>{{ item.descricao }}</p>
+                <b> R$ {{ item.preco }}</b>
+            </div>
         {% endfor %}
-    </ul>
+
+        <style>
+            .cardapio-item {
+                display: inline-block;
+                width: 300px;
+                margin-right: 20px;
+                margin-bottom: 20px;
+                vertical-align: top;
+            }
+
+            .cardapio-item img {
+                width: 100%;
+                height: auto;
+            }
+        </style>
+
 </body>
 </html>

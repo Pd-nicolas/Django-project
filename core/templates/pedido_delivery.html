@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Pedido de Delivery</title>
+</head>
+<body>
+    <h1>Confirmação de Pedido de Delivery</h1>
+    <p>O pedido será enviado para o seguinte endereço:</p>
+    <p>Endereço: {{ endereco }}</p>
+    <p>Taxa de Entrega: R$ 10.00</p>
+    <p>Total a pagar: R$ {{ total|add:10 }}</p>
+
+</body>
+</html>

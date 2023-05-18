@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Delivery</title>
+    <title>Pedido de Delivery</title>
 </head>
 <body>
     <h1>Pedido de Delivery</h1>
@@ -11,17 +11,28 @@
         <label for="cliente">Cliente:</label>
         <select name="cliente" id="cliente">
             {% for cliente in clientes %}
-                <option value="{{ cliente.id }}">{{ cliente.nome }}</option>
+                <option value="{{ cliente.id }}" data-endereco="{{ cliente.endereco }}">{{ cliente.nome }}</option>
             {% endfor %}
         </select>
         <br>
         <label for="endereco">Endereço:</label>
-        <input type="text" name="endereco" id="endereco">
+        <input type="text" name="endereco" id="endereco" readonly>
         <br>
         <label for="itens">Itens:</label>
-        <textarea name="itens" id="itens"></textarea>
+        <br>
+        {% for item in cardapio %}
+            <input type="checkbox" name="itens" value="{{ item.id }}"> {{ item.nome }} - R$ {{ item.preco }}<br>
+        {% endfor %}
         <br>
         <input type="submit" value="Fazer Pedido">
     </form>
+
+    <script>
+        document.getElementById('cliente').addEventListener('change', function() {
+            var selectedOption = this.options[this.selectedIndex];
+            var endereco = selectedOption.getAttribute('data-endereco');
+            document.getElementById('endereco').value = endereco;
+        });
+    </script>
 </body>
 </html>
