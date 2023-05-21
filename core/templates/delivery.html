@@ -20,8 +20,13 @@
         <br>
         <label for="itens">Itens:</label>
         <br>
+        <div class="box-cardapio">
         {% for item in cardapio %}
-            <input type="checkbox" name="itens" value="{{ item.id }}"> {{ item.nome }} - R$ {{ item.preco }}<br>
+            <h3>{{ item.nome }}</h3>
+            <p>{{ item.descricao }}</p>
+            <b> R$ {{ item.preco }}</b> <input type="checkbox" name="itens" value="{{ item.id }}">
+            <br>
+        </div>
         {% endfor %}
         <br>
         <input type="submit" value="Fazer Pedido">

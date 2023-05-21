@@ -1,0 +1,73 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-areas: "header header header";
+    background-image: url(/static/img/peakpx.webp);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.cabecalho{
+    grid-area: header;
+    text-align: center;
+    background:#f39a75;
+    border: solid #fff0c1;
+    box-shadow: 2px 2px 10px #fff0c1;
+}
+
+.links{
+    margin-top: 10%;
+}
+
+.botao-cadastro{
+    background: #f39a75;
+    border: solid #fff0c1;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px #fff0c1;
+    margin: 5%;
+    height: 100px;
+    width: 120%;
+    display: flex;
+}
+
+.botao-delivery{
+    background: #f39a75;
+    border: solid #fff0c1;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px #fff0c1;
+    margin: 5%;
+    height: 100px;
+    width: 120%;
+    display: flex;
+}
+
+.botao-reserva{
+    background: #f39a75;
+    border: solid #fff0c1;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px #fff0c1;
+    margin: 5%;
+    height: 100px;
+    width: 120%;
+    display: flex;
+}
+
+a{
+    position: relative;
+    margin-top: 33px;
+    margin-left: 5%;
+    background-color: #f9c59b;
+    height: 20px;
+    padding: 10px 10px;
+    color: black;
+    text-decoration: none; /* Remover sublinhado */
+    border-radius: 4px;
+}
+
+a:hover{
+
+    background-color: #ed6f4f; /* Cor de fundo ao passar o mouse */
+}
