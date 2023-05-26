@@ -4,7 +4,7 @@ body{
     display: grid;
     grid-template-areas: "header header header";
     background-color: black;
-    background-image: url('/static/img/poseisom.webp');
+    background-image: url('/static/img/IMG_20230525_233523\ \(1\).png');
     background-repeat: no-repeat;
     background-position: right top;
 }
@@ -12,13 +12,20 @@ body{
 .cabecalho{
     grid-area: header;
     text-align: center;
-    background:#289add;
-    border: solid #9aedfc;
-    box-shadow: 2px 2px 10px white;
+    background:#d0a816;
     color: white;
     font-size: 35px;
     height: 70%;
 
+}
+
+.efeito{
+  grid-area: header;
+  color: white;
+  height: 0%;
+  border:solid;
+  margin-top: 5.3%;
+  box-shadow: 2px 2px 20px white;
 }
 
 h1{
@@ -27,7 +34,7 @@ h1{
 }
 
 .links{
-    margin-top: 10%;
+    margin-top: 5%;
     margin-left: 10%;
 }
 
@@ -49,23 +56,30 @@ h1{
 
 .botao-cadastro {
   background-image: url(/static/img/afrodite.webp);
-  background-position-y: -250px;
+  background-position-x: 0px;
+  background-position-y: -390px;
+  background-size: 160%;
+
 }
 
 .botao-delivery {
   background-image: url(/static/img/Zeus.webp);
-  background-position-y: -225px;
+  background-position-x: -250px;
+  background-position-y: -320px;
+  background-size: 150%;
 }
 
 .botao-reserva {
   background-image: url(/static/img/ares.webp);
-  background-position-y: -425px;
+  background-position-x: -100px;
+  background-position-y: -600px;
+  background-size: 160%;
 }
 
 .botao-cadastro a,
 .botao-delivery a,
 .botao-reserva a {
-  background-color: #289add;
+  background-color: #d0a816;
   height: 20px;
   width: 150px;
   padding: 10px 10px;
@@ -82,5 +96,17 @@ h1{
 .botao-cadastro a:hover,
 .botao-delivery a:hover,
 .botao-reserva a:hover {
-  background-color: #0175b7;
+  background-color: #aa8912;
 }
+
+h2{
+  color: white;
+  margin-left: 3%;
+}
+
+h3{
+  color: white;
+  margin-left: 34%;
+
+}
+

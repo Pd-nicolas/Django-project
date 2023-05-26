@@ -1,31 +1,59 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Reserva</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/reserva.css' %}">
+    <title>Olympus Burguer</title>
 </head>
 <body>
-    <h1>Reservar Mesa</h1>
-    <form method="POST">
-        {% csrf_token %}
-        <label for="cliente">Cliente:</label>
-        <select name="cliente" id="cliente">
-            {% for cliente in clientes %}
-                <option value="{{ cliente.id }}">{{ cliente.nome }}</option>
-            {% endfor %}
-        </select>
-        <br><br>
-        <label for="data">Data:</label>
-        <input type="date" name="data" id="data">
-        <br><br>
-        <label for="hora">Hora:</label>
-        <input type="time" name="hora" id="hora">
-        <br><br>
-        <input type="submit" value="Fazer Reserva">
-    </form>
 
-    {% if reserva_confirmada %}
-        <p>Reserva confirmada para {{ cliente.nome }} em {{ data }} às {{ hora }}.</p>
-    {% endif %}
+    <header class="cabecalho">
+
+        <h1>ΩLYMPUS ΒURGΞR</h1>
+
+    </header>
+
+    <div class="efeito"></div>
+
+    <h1 id="texto">Faça sua reserva</h1>
+
+
+
+    <div class="container">
+
+        <form method="POST">
+            {% csrf_token %}
+            <label for="cliente">Cliente:</label> <br>
+            <select name="cliente" id="cliente">
+                {% for cliente in clientes %}
+                    <option value="{{ cliente.id }}">{{ cliente.nome }}</option>
+                {% endfor %}
+            </select>
+            <br><br>
+            <label for="data">Data:</label>
+            <input type="date" name="data" id="data">
+            <br><br>
+            <label for="hora">Hora:</label>
+            <input type="time" name="hora" id="hora">
+            <br><br>
+            <input type="submit" value="Fazer Reserva" onclick="confirmacao()">
+        </form>
+
+       <script>
+            function confirmacao(){
+                alert("Reserva Confirmada")
+            }
+       </script>
+
+    </div>
+    <br>
+    <div class="botao-voltar">
+        <br>
+        <a href="/home/">Voltar</a>
+    </div>
+
 </body>
 </html>
