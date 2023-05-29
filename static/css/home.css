@@ -3,7 +3,6 @@ body{
     padding: 0;
     display: grid;
     grid-template-areas: "header header header";
-    background-color: black;
     background-image: url('/static/img/IMG_20230525_233523\ \(1\).png');
     background-repeat: no-repeat;
     background-position: right top;
@@ -12,7 +11,7 @@ body{
 .cabecalho{
     grid-area: header;
     text-align: center;
-    background:#d0a816;
+    background:#aa8c21;
     color: white;
     font-size: 35px;
     height: 70%;

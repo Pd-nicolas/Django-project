@@ -3,8 +3,7 @@ body {
     padding: 0;
     display: grid;
     grid-template-areas: "header header header";
-    background-color: black;
-    background-image: url('/static/img/ares.webp');
+    background-image: url('/static/img/aresGound.png');
     background-repeat: no-repeat;
     background-position: left top;
 
@@ -16,7 +15,7 @@ body {
   .cabecalho{
     grid-area: header;
     text-align: center;
-    background:#289add;
+    background:#aa8c21;
     color: white;
     font-size: 35px;
     height: 70%;
@@ -43,7 +42,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background:#289add;
+    background:white;
     border: solid #9aedfc;
     box-shadow: 2px 2px 10px white;
     border-radius: 10px;
@@ -82,7 +81,7 @@ body {
 
   a{
 
-    background-color: #289add;
+    background-color: #d0a816;
     padding: 10px 9%;
     color: white;
     text-decoration: none; /* Remover sublinhado */
@@ -95,7 +94,7 @@ body {
 
   a:hover{
 
-    background-color: #0175b7;
+    background-color: #aa8912;
   }
 
   #texto{

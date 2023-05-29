@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'css/cardapio.css' %}">
+    <link rel="stylesheet" href="{% static 'css/delivery_cardapio.css' %}">
     <title>Cadápio e Delivery</title>
 </head>
 
@@ -18,32 +18,39 @@
 
     <div class="efeito"></div>
 
-
-    <h1 id="titulo">Cadápio e Delivery</h1>
-
     <div class="container">
+
         <form method="POST">
           {% csrf_token %}
+          <h1 id="titulo">Cadápio e Delivery</h1> <br>
+
           <div class="box-cardapio">
             {% for item in cardapio %}
+
             <div class="cardapio-item">
               <h3>{{ item.nome }}</h3>
-              <p>{{ item.descricao }}</p>
-              <b> R$ {{ item.preco }}</b> <input type="checkbox" name="itens" value="{{ item.id }}"> Adicionar à sacola
+              <p id="descricao">{{ item.descricao }}</p>
+              <b id="preco"> R$ {{ item.preco }}</b> <input type="checkbox" name="itens" value="{{ item.id }}"> Adicionar à sacola
             </div>
+            <br>
             {% endfor %}
           </div>
+
           <br>
           <label for="cliente">Cliente:</label>
-          <select name="cliente" id="cliente">
+          <select id="cliente-barra" name="cliente" id="cliente">
             {% for cliente in clientes %}
             <option value="{{ cliente.id }}" data-endereco="{{ cliente.endereco }}">{{ cliente.nome }}</option>
             {% endfor %}
           </select>
           <br>
           <label for="endereco">Endereço:</label>
-          <input type="text" name="endereco" id="endereco" readonly> <br>
+          <input type="text" name="endereco" id="endereco" readonly> <br> <br>
           <input type="submit" value="Fazer Pedido">
+
+          <p>Ainda não é cadastrado?</p>
+
+          <a href="/cadastro-cliente/">cadastre-se aqui</a>
         </form>
       </div>
 
@@ -56,8 +63,6 @@
         });
     </script>
 
-    <p>Ainda não é cadastrado?</p>
-    <b>Cadastre-se agora</b> <br>
-    <a href="">Fazer cadastro</a>
+
 </body>
 </html>
