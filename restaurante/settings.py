@@ -1,5 +1,7 @@
 import os
 
+import django_heroku
+
 """
 Django settings for restaurante project.
 
@@ -137,3 +139,4 @@ STATICFILES_DIRS = [
 ]
 
 
+django_heroku.settings(locals())
