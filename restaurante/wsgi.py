@@ -19,5 +19,5 @@ settings.DEBUG = False
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'restaurante.settings')
 
-application = StaticFilesHandler(get_wsgi_application())
+application = get_wsgi_application()
 
