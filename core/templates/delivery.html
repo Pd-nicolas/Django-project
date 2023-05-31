@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'css/delivery_cardapio.css' %}">
+    <link rel="stylesheet" href="{% static 'css/cardapioD.css' %}">
     <title>Cadápio e Delivery</title>
 </head>
 
@@ -37,15 +37,14 @@
           </div>
 
           <br>
-          <label for="cliente">Cliente:</label>
+          <label for="cliente">Cliente:</label> <br>
           <select id="cliente-barra" name="cliente" id="cliente">
             {% for cliente in clientes %}
             <option value="{{ cliente.id }}" data-endereco="{{ cliente.endereco }}">{{ cliente.nome }}</option>
             {% endfor %}
           </select>
           <br>
-          <label for="endereco">Endereço:</label>
-          <input type="text" name="endereco" id="endereco" readonly> <br> <br>
+           <br> <br>
           <input type="submit" value="Fazer Pedido">
 
           <p>Ainda não é cadastrado?</p>
@@ -54,14 +53,11 @@
         </form>
       </div>
 
+      <div class="botao-voltar">
+        <a href="/home/">Voltar</a>
+      </div>
 
-    <script>
-        document.getElementById('cliente').addEventListener('change', function() {
-            var selectedOption = this.options[this.selectedIndex];
-            var endereco = selectedOption.getAttribute('data-endereco');
-            document.getElementById('endereco').value = endereco;
-        });
-    </script>
+
 
 
 </body>

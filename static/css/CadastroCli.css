@@ -4,9 +4,10 @@ body {
   display: grid;
   grid-template-areas: "header header header";
   background-color: black;
-  background-image: url('/static/img/png_20230525_230546_0000.png');
+  background-image: url('/static/img/afroBGround.webp');
   background-repeat: no-repeat;
   background-position: left top;
+
 
 }
 h1 {

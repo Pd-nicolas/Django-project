@@ -1,4 +1,5 @@
 import os
+
 """
 Django settings for restaurante project.
 

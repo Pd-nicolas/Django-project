@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'css/Cadastro.css' %}">
+    <link rel="stylesheet" href="{% static 'css/CadastroCli.css' %}">
     <title>Cadastre-se</title>
 </head>
 
@@ -40,7 +40,13 @@
             <input type="text" name="telefone" id="telefone"> <br>
             <br> <br>
 
-            <input type="submit" value="Cadastrar" id="botao">
+            <input type="submit" value="Cadastrar" id="botao" onclick="confirmar()">
+
+            <script>
+                function confirmar(){
+                    alert('Cadastro realizado com sucesso.');
+                }
+            </script>
         </form>
 
     </div>

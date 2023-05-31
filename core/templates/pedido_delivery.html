@@ -1,15 +1,40 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/pedido_d.css' %}">
     <title>Pedido de Delivery</title>
 </head>
 <body>
+    <header class="cabecalho">
+
+        <h1>ΩLYMPUS ΒURGΞR </h1>
+
+    </header>
+
+    <div class="efeito">
+
+    </div>
+
+    <div class="container">
+        <div class="box">
+
     <h1>Confirmação de Pedido de Delivery</h1>
     <p>O pedido será enviado para o seguinte endereço:</p>
-    <p>Endereço: {{ endereco }}</p>
+    <p>{{ endereco }}</p>
+    <p>Pedido: R$ {{ total }} </p>
     <p>Taxa de Entrega: R$ 10.00</p>
     <p>Total a pagar: R$ {{ total|add:10 }}</p>
 
+        </div>
+    </div>
+
+    <div class="botao-voltar">
+        <br>
+        <a href="/home/">Voltar</a>
+    </div>
 </body>
 </html>
